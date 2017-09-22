@@ -16,6 +16,13 @@ import Pux.Renderer.SmolderDOM (renderToDOM)
 renderToDOM "#app" app.markup app.input
 ```
 
+### Note on event handlers
+
+You'll also need to use Smolder Markup's `on` function directly.
+The helper functions in `Pux.DOM.Events` will _not_ work.
+
+For example, replace `... #! onChange InputChanged` with `... #! on "change" InputChanged`.
+
 ## Licence
 
 Copyright 2017 Bodil Stokke
